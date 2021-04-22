@@ -56,8 +56,9 @@ namespace FinanceApp
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
+
 
             });
         }
