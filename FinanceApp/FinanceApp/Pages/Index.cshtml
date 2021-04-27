@@ -5,50 +5,51 @@
     ViewData["Title"] = "Index";
 }
 
+
 <h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Fund[0].Cash)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fund[0].Checking)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fund[0].Savings)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fund[0].Credit)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Fund) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cash)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Checking)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Savings)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Credit)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.IdFunds">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.IdFunds">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.IdFunds">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <p>
+        <a asp-page="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fund[0].Cash)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fund[0].Checking)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fund[0].Savings)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fund[0].Credit)
+                </th>
+                <th>        <h1><a href="~/Pages/Create.cshtml">Create Page</a></h1></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model.Fund) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cash)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Checking)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Savings)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Credit)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.IdFunds">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.IdFunds">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.IdFunds">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
