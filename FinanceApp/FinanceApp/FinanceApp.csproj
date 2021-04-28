@@ -20,11 +20,11 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="MySql.Data" Version="8.0.24" />
     <PackageReference Include="MySql.Data.EntityFramework" Version="8.0.24" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.22" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

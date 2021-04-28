@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
@@ -9,10 +8,9 @@ namespace FinanceApp.Models
 {
     public partial class financeworksContext : DbContext
     {
-        public financeworksContext(IConfiguration configuration)
+        public financeworksContext()
         {
         }
-        public IConfiguration Configuration { get; }
 
         public financeworksContext(DbContextOptions<financeworksContext> options)
             : base(options)
@@ -27,7 +25,9 @@ namespace FinanceApp.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySQL(Configuration.GetConnectionString("DefaultConnection");
+                //optionsBuilder.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
+                optionsBuilder.UseMySQL(Configuration.GetConnectionString("server=localhost;port=3306;database=financeworks;user=root;password=Laserpn7;"));
+
 
             }
         }

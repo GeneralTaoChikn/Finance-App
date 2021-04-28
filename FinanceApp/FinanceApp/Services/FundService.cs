@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FinanceApp.Models;
 
 namespace FinanceApp.Services
 {
@@ -25,6 +26,17 @@ namespace FinanceApp.Services
 
         public String UpdateFund()
         {
+            Fund fund = new Fund() {
+                Cash = 1800,
+                Checking = 2000,
+                Savings = 8000,
+                IdFunds = 0
+                
+            };
+            
+            _context.Funds.Add(fund);
+            //_context.SaveChangesAsync
+            _context.SaveChanges();
             String query = "INSERT into funds VALUES( '0,'2075','1253.87','8000','-86.31')";
 
             //using (SqlConnection cnn = new SqlConnection(Configuration.GetConnectionString("DefaultConnection")))

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KvVcuazS8oW5AgjyasOrU/sVz8p/3oy3hqB34KqX7oTR7fNcHZIKx83hU1JLBcoSARS0w81uC37CrflVMBIsCA==",
+  "dgSpecHash": "PL9WAnAsNb2Frk578gGg2YbFvEeHsHjk6FbsMm6AV42nHQu8CMkrlLfCCx/XoN7fcimj6Z1R9uE681wmHxO2Vg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Chris\\source\\repos\\Finance-App\\FinanceApp\\FinanceApp\\FinanceApp.csproj",
   "expectedPackageFiles": [
@@ -59,6 +59,7 @@
     "C:\\Users\\Chris\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\mysql.data\\8.0.24\\mysql.data.8.0.24.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\mysql.data.entityframework\\8.0.24\\mysql.data.entityframework.8.0.24.nupkg.sha512",
+    "C:\\Users\\Chris\\.nuget\\packages\\mysql.data.entityframeworkcore\\8.0.22\\mysql.data.entityframeworkcore.8.0.22.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\mysql.entityframeworkcore\\5.0.0\\mysql.entityframeworkcore.5.0.0.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
