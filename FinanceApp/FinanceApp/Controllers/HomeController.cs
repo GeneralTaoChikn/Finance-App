@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using FinanceApp.Models;
+using FinanceApp.Services;
 
 namespace FinanceApp.Controllers
 {
@@ -13,16 +14,20 @@ namespace FinanceApp.Controllers
     public class HomeController : Controller
     {
         financeworksContext ctx;
-        public HomeController(financeworksContext context)
+        IFundService fs;
+
+        public HomeController(financeworksContext context, IFundService fundService)
         {
+
             ctx = context;
+            fs = fundService;
         }
 
         public IActionResult Get()
         {
-            List<User> list = new List<User>();
-            var result = ctx.Users.ToList();
-
+            var result = fs.UpdateFund();
+            //List<User> list = new List<User>();
+            //var result = ctx.Users.ToList();
             return Ok(result);
         }
         //public IActionResult Index()

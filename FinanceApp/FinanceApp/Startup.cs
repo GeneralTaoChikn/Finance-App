@@ -1,4 +1,5 @@
 using FinanceApp.Models;
+using FinanceApp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +32,7 @@ namespace FinanceApp
             services.AddControllers();
             services.AddDbContext<financeworksContext>(options =>
                 options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IFundService, FundService>();
             services.AddRazorPages();
         }
 
