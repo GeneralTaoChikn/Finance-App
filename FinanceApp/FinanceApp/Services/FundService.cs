@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -26,15 +26,30 @@ namespace FinanceApp.Services
 
         public String UpdateFund()
         {
+            Guid guid = new Guid();
+
+            User user = new User()
+            {
+                Id = guid.ToString(),
+                FirstName = "Christopher",
+                LastName = "Diasanta",
+                Email = "",
+                TransactionSet = 0
+            };
+
+
+
             Fund fund = new Fund() {
+                FundsId = Guid.NewGuid().ToString(),
+                UserId = guid.ToString(),
                 Cash = 1800,
                 Checking = 2000,
                 Savings = 8000,
-                IdFunds = 0
                 
             };
             
             _context.Funds.Add(fund);
+            _context.Users.Add(user);
             //_context.SaveChangesAsync
             _context.SaveChanges();
             String query = "INSERT into funds VALUES( '0,'2075','1253.87','8000','-86.31')";

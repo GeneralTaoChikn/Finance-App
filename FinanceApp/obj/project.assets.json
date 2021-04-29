@@ -26,7 +26,7 @@
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/Humanizer.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
@@ -123,7 +123,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "5.0.5"
         },
         "compile": {
-          "lib/netstandard2.1/_._": {}
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -316,23 +316,23 @@
           "lib/net5.0/Zstandard.Net.dll": {}
         }
       },
-      "MySql.Data.EntityFrameworkCore/8.0.22": {
+      "MySql.Data.EntityFrameworkCore/8.0.13": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "3.1.1",
-          "MySql.Data": "8.0.22"
+          "Microsoft.EntityFrameworkCore.Relational": "2.1.2",
+          "MySql.Data": "8.0.13"
         },
         "compile": {
-          "lib/netstandard2.1/MySql.Data.EntityFrameworkCore.dll": {}
+          "lib/netstandard2.0/MySql.Data.EntityFrameworkCore.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/MySql.Data.EntityFrameworkCore.dll": {}
+          "lib/netstandard2.0/MySql.Data.EntityFrameworkCore.dll": {}
         }
       },
-      "MySql.EntityFrameworkCore/5.0.0": {
+      "MySql.EntityFrameworkCore/3.1.10": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.10",
           "MySql.Data": "8.0.23"
         },
         "compile": {
@@ -1097,31 +1097,37 @@
         "mysql.data.nuspec"
       ]
     },
-    "MySql.Data.EntityFrameworkCore/8.0.22": {
-      "sha512": "o/+OMqQ0fw4f6COfRrbwqP0CKcqoFkCfb1Rl3mfgUcae3XqAkiA6t8rsjA1wnkxUvwfNYX+YM2w2Xa6u4QEUkA==",
+    "MySql.Data.EntityFrameworkCore/8.0.13": {
+      "sha512": "7ibPXI7uiKA4HknlFP0FBORHZMiF1QBroNCqr/lAD88+O9uhNpyOkbfegKhzLN9yyjQo8CXc6xfw3gx5cpwLgw==",
       "type": "package",
-      "path": "mysql.data.entityframeworkcore/8.0.22",
+      "path": "mysql.data.entityframeworkcore/8.0.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net452/MySql.Data.EntityFrameworkCore.dll",
+        "lib/net452/MySql.Data.EntityFrameworkCore.xml",
+        "lib/net461/MySql.Data.EntityFrameworkCore.dll",
+        "lib/net461/MySql.Data.EntityFrameworkCore.xml",
+        "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.dll",
+        "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.xml",
         "lib/netstandard2.0/MySql.Data.EntityFrameworkCore.dll",
         "lib/netstandard2.0/MySql.Data.EntityFrameworkCore.xml",
-        "lib/netstandard2.1/MySql.Data.EntityFrameworkCore.dll",
-        "lib/netstandard2.1/MySql.Data.EntityFrameworkCore.xml",
-        "mysql.data.entityframeworkcore.8.0.22.nupkg.sha512",
+        "mysql.data.entityframeworkcore.8.0.13.nupkg.sha512",
         "mysql.data.entityframeworkcore.nuspec"
       ]
     },
-    "MySql.EntityFrameworkCore/5.0.0": {
-      "sha512": "1oa4T5poCKEbKczGWNT2vKjsaqDvRXhg9Hwzu7XLWvWrKNbyj6yUsAIBnl49Hs1mTaGHDJjoAHTbbvNPDEnhGg==",
+    "MySql.EntityFrameworkCore/3.1.10": {
+      "sha512": "cPe15C6u6JfNbt86b2V+4EcaRKLnIPaMU1azDB+J0i09zNWYVGW1FNmhL2UXWF3XoxGhXge/aNGHfkXRid/rrQ==",
       "type": "package",
-      "path": "mysql.entityframeworkcore/5.0.0",
+      "path": "mysql.entityframeworkcore/3.1.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/netstandard2.0/MySql.EntityFrameworkCore.dll",
+        "lib/netstandard2.0/MySql.EntityFrameworkCore.xml",
         "lib/netstandard2.1/MySql.EntityFrameworkCore.dll",
         "lib/netstandard2.1/MySql.EntityFrameworkCore.xml",
-        "mysql.entityframeworkcore.5.0.0.nupkg.sha512",
+        "mysql.entityframeworkcore.3.1.10.nupkg.sha512",
         "mysql.entityframeworkcore.nuspec"
       ]
     },
@@ -1685,10 +1691,9 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.EntityFrameworkCore.Design >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.5",
-      "MySql.Data.EntityFrameworkCore >= 8.0.22",
-      "MySql.EntityFrameworkCore >= 5.0.0"
+      "MySql.Data.EntityFrameworkCore >= 8.0.13",
+      "MySql.EntityFrameworkCore >= 3.1.10"
     ]
   },
   "packageFolders": {
@@ -1735,12 +1740,6 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[5.0.5, )"
-          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -1749,11 +1748,11 @@
           },
           "MySql.Data.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[8.0.22, )"
+            "version": "[8.0.13, )"
           },
           "MySql.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[5.0.0, )"
+            "version": "[3.1.10, )"
           }
         },
         "imports": [
