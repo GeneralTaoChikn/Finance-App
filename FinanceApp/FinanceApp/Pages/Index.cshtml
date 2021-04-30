@@ -35,15 +35,7 @@
     </thead>
     <tbody>
 
-        @foreach (var u in Model.User)
-        {
-            <tr>
-                <td>
-                    @*@Html.DisplayFor(model => model.User[0].FirstName)*@
-                    @Html.DisplayFor(model => model.u[0].FirstName)
-                </td>
-            </tr>
-        }  
+   
 
         @foreach (var item in Model.Fund)
         {
