@@ -25,14 +25,11 @@ namespace FinanceApp.Controllers
 
         public IActionResult Get()
         {
-            var result = fs.UpdateFund();
-            //List<User> list = new List<User>();
-            //var result = ctx.Users.ToList();
+            //var result = fs.UpdateFund();
+            List<User> list = new List<User>();
+            var result = ctx.Users.ToList();
             return Ok(result);
         }
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+
     }
 }
