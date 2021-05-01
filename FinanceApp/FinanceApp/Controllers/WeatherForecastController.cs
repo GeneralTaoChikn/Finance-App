@@ -27,6 +27,10 @@ namespace FinanceApp.Controllers
 
             return Ok(result);
         }
+
+        //part of original
+        //
+        //
         //private static readonly string[] Summaries = new[]
         //{
         //    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"

@@ -33,6 +33,8 @@ namespace FinanceApp
             services.AddDbContext<financeworksContext>(options =>
                 options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IFundService, FundService>();
+            services.AddScoped<ITransactionService, TransactionService>();
+            services.AddScoped<IUserService, UserService>();
             services.AddRazorPages();
         }
 
@@ -60,8 +62,6 @@ namespace FinanceApp
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
-
-
             });
         }
     }
