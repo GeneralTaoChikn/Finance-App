@@ -3,6 +3,8 @@
 
 @{
     ViewData["Title"] = "Index";
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+    </script>
 }
 
 
@@ -13,6 +15,7 @@
 </p>
 <h2>@DateTime.Now.ToLongDateString()</h2>
 <h2>@DateTime.Now.ToShortTimeString()</h2>
+<script src ="~/App/HelloWorld.js"></script>
 
 <table class="table">
     <thead>
@@ -35,29 +38,79 @@
     </thead>
     <tbody>
 
-   
+
 
         @foreach (var item in Model.Fund)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cash)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Checking)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Savings)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Credit)
-                </td>
-                <td>
-                    @*<a asp-page="./Edit" asp-route-id="@item.IdFunds">Edit</a> |
-                        <a asp-page="./Details" asp-route-id="@item.IdFunds">Details</a> |
-                        <a asp-page="./Delete" asp-route-id="@item.IdFunds">Delete</a>*@
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Checking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Savings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Credit)
+            </td>
+            <td>
+                @*<a asp-page="./Edit" asp-route-id="@item.IdFunds">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdFunds">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdFunds">Delete</a>*@
+            </td>
+        </tr>
         }
+
+        <h1>Data Binding Example</h1>
+        <label>Name:</label>
+        <input type="text" ng-model="name" placeholder="Enter a name">
+        <!-- <hr /> -->
+        <h2>Hello {{name}} !</h2>
+
+        <hr />
+        <hr />
+
+        <h1>Directives Example</h1>
+        <div ng-app ng-init="celsius=0;diff=32">
+            <p>celsius: <input type="text" ng-model="celsius"></p>
+            <p>Fahrenheit: {{ celsius*1.8+diff }}</p>
+            <p>
+                Time: {{</p>
+    </div>
+
+    <div ng0app ng-init ="students =['David','Steve','Bob']">
+        <ol>
+            <li ng-repeat="name in students">
+                {{name}}
+                </li>
+                </ol>
+        </div>
+
+        <hr />
+        <hr />
+
+        <h1>Controllers Example</h1>
+        <div ng-app="myApp" ng-controller="myController">
+            {{message}}
+        </div>
+        <script>
+        var ngApp = angular.module('myApp',[]);
+
+        ngApp.controller("myController", function ($scope) {
+            $scope.message = "hello World!";
+        });
+        </script>
+        <script>
+        let homeEndPoint = "https://localhost:44312/api/home";
+        // var myWorker = new Worker(homeEndPoint));
+        // var myWorker = "helloWJOrld";
+        const myWorker = async() => {
+            const response = await fetch(homeEndPoint);
+            document.write(response);
+        };
+
+        </script>
     </tbody>
 </table>
