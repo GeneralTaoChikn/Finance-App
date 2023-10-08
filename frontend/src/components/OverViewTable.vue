@@ -1,19 +1,18 @@
 <template>
-  <div>
-    <h1 style="color: wheat">Hello</h1>
-    <v-data-table
-      headers="headers.value"
-      items="deserts.value"
-      hide-actions
-      class="elevation-1"
-      select-all
-      pagination.sync="pagination"
-      item-key="id"
-      loading="true"
-      search="search"
-    >
-    </v-data-table>
-  </div>
+  <h1 style="color: wheat">Hello</h1>
+  <v-data-table
+    :headers="headers.value"
+    :items="desserts.value"
+    hide-actions
+    class="elevation-1"
+    select-all
+    pagination.sync="pagination"
+    item-key="id"
+    loading="true"
+    search="search"
+  >
+  </v-data-table>
+  <h1 style="color: wheat">No Render</h1>
 </template>
 <script setup>
 import { ref } from "vue";

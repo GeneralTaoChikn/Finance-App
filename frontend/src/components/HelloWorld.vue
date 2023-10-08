@@ -2,6 +2,7 @@
   <v-container class="fill-height">
     <v-responsive class="align-center text-center fill-height">
       <v-img height="300" src="@/assets/logo.svg" />
+      https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fgithub-logo_25231&psig=AOvVaw2YavewSCTlxA7aye_1vZ-M&ust=1696830767680000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOC0uqvh5YEDFQAAAAAdAAAAABAE
 
       <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
 
